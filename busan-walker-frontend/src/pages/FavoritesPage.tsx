@@ -43,13 +43,13 @@ export default function FavoritesPage() {
     if (isLoading) {
         return (
             <div className="py-8 text-center text-sm text-gray-600">
-                즐겨찾기 목록??불러?�는 중입?�다...
+                즐겨찾기 목록을 불러오는 중입니다...
             </div>
         )
     }
 
     if (isError || !data) {
-        const msg = getErrorMessage(error, "즐겨찾기 목록??불러?��? 못했?�니??")
+        const msg = getErrorMessage(error, "즐겨찾기 목록을 불러오지 못했습니다")
         return (
             <div className="py-8 text-center text-sm text-red-600">
                 {msg}
@@ -62,17 +62,17 @@ export default function FavoritesPage() {
     return (
         <div className="mx-auto max-w-5xl py-6 space-y-4">
             <header className="flex justify-between items-center">
-                <h1 className="text-xl font-semibold">??즐겨찾기</h1>
-                <p className="text-xs text-gray-500">?�주 찾는 부??관광�?�???곳에??관리하?�요.</p>
+                <h1 className="text-xl font-semibold">⭐ 즐겨찾기</h1>
+                <p className="text-xs text-gray-500">자주 찾는 부산 관광지를 한 곳에서 관리하세요.</p>
             </header>
 
             {items.length === 0 ? (
                 <div className="rounded-2xl border bg-white p-6 text-center text-sm text-gray-600">
-                    ?�직 즐겨찾기???�록??관광�?가 ?�습?�다.{" "}
+                    아직 즐겨찾기에 등록된 관광지가 없습니다.{" "}
                     <Link to="/"
                           className="text-blue-600 hover:underline"
                     >
-                        ?�으�??�아가 관광�?�??�러보세??
+                        홈으로 돌아가 관광지를 둘러보세요
                     </Link>
                 </div>
             ) : (
