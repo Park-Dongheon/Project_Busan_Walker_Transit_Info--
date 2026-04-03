@@ -1,0 +1,68 @@
+# busan-walker/config/application-local.yml
+spring:
+  config:
+    import:
+      - "optional:file:./config/application-local-secrets.properties"
+
+  datasource:
+    url: ${BH_DB_URL}
+    username: ${BH_DB_USER}
+    password: ${BH_DB_PASS}
+
+    hikari:
+      maximum-pool-size: ${BH_DB_POOL_MAX:10}
+      minimum-idle: ${BH_DB_POOL_MIN:3}
+      leak-detection-threshold: 20000
+
+  devtools:
+    restart:
+      additional-paths:
+        - "./config"
+      exclude: "logs/**,**/*.log,static/**,public/**,META-INF/maven/**"
+
+    livereload:
+      enabled: true
+
+logging:
+  level:
+    root: INFO
+    '[org.springframework.web]': INFO
+    '[org.hibernate.SQL]': DEBUG
+    '[org.hibernate.orm.jdbc.bind]': TRACE
+    '[org.springframework.mail]': DEBUG
+    '[org.springframework.mail.javamail]': DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["*"]
+
+  endpoint:
+    health:
+      show-details: "always"
+
+springdoc:
+  swagger-ui:
+    path: /docs
+  api-docs:
+    path: /v3/api-docs
+
+app:
+  file:
+    # Local defaults stay on disk, but can be switched to S3 by env vars.
+    # Example:
+    #   BH_FILE_PROVIDER=s3
+    #   BH_FILE_S3_BUCKET=busan-walker-images
+    #   BH_FILE_PUBLIC_BASE_URL=https://dmsab1zbcfcpn.cloudfront.net
+    provider: ${BH_FILE_PROVIDER:local}
+    local-base-dir: ${BH_FILE_LOCAL_BASE_DIR:./.data/uploads}
+    public-base-url: ${BH_FILE_PUBLIC_BASE_URL:}
+    s3-bucket: ${BH_FILE_S3_BUCKET:}
+    s3-region: ${BH_FILE_S3_REGION:ap-northeast-2}
+    s3-key-prefix: ${BH_FILE_S3_KEY_PREFIX:local}
+  attraction-image-import:
+    enabled: ${BH_ATTRACTION_IMAGE_IMPORT_ENABLED:false}
+    image-dir: ${BH_ATTRACTION_IMAGE_IMPORT_IMAGE_DIR:}
+    overwrite-existing: ${BH_ATTRACTION_IMAGE_IMPORT_OVERWRITE_EXISTING:false}
+    exit-after-run: ${BH_ATTRACTION_IMAGE_IMPORT_EXIT_AFTER_RUN:true}

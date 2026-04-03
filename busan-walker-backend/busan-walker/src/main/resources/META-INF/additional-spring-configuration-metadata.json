@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "name": "app.security.jwt",
+      "type": "pnu.busan.walker.auth.config.JwtProperties",
+      "sourceType": "pnu.busan.walker.auth.config.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.security.jwt.issuer",
+      "type": "java.lang.String",
+      "description": "JWT issuer"
+    },
+    {
+      "name": "app.security.jwt.audience",
+      "type": "java.lang.String",
+      "description": "JWT audience"
+    },
+    {
+      "name": "app.security.jwt.access-ttl",
+      "type": "java.time.Duration",
+      "description": "Access token TTL"
+    },
+    {
+      "name": "app.security.jwt.refresh-ttl",
+      "type": "java.time.Duration",
+      "description": "Refresh token TTL"
+    },
+    {
+      "name": "app.security.jwt.active-kid",
+      "type": "java.lang.String",
+      "description": "Active signing key id"
+    },
+    {
+      "name": "app.security.jwt.keys",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "Signing key map keyed by kid"
+    }
+  ]
+}

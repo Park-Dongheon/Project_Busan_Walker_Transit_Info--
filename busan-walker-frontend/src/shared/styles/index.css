@@ -1,0 +1,26 @@
+/* src/index.css */
+
+/*
+  Tailwind CSS 엔트리 포인트
+  - Tailwind v4 방식: @import "tailwindcss";
+  - 빌드(PostCSS/Vite 등)에서 Tailwind 플러그인이 동작해야 유틸/프리플라이트/variants가 생성됨
+*/
+@import "tailwindcss";
+
+/*
+  프로젝트 전역 UI 정책(브라우저 기본 렌더링 힌트)
+  - color-scheme: light
+    -> UA(브라우저)에게 "이 앱은 라이트 테마 기준"이라고 알려서
+       폼 컨트롤/스크롤바 등 기본 UI의 색상 선택에 영향을 줌
+  - 다크 모드를 지원하지 않는 프로젝트라면 light로 고정해 일관성을 확보 가능
+*/
+:root {
+  color-scheme: light;
+}
+
+/*
+  풀-하이트 레이아웃 기반 세팅
+  - #root가 화면 높이를 100% 차지하도록 기반을 깔아두면,
+    이후 layout 컴포넌트에서 min-h-screen / h-full 같은 스타일이 예측 가능
+*/
+html, body, #root { height: 100%; }

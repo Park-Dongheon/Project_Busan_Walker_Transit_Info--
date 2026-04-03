@@ -1,0 +1,27 @@
+# === Secrets ===
+**/config/application-local-secrets.properties
+**/.env
+**/.env.*
+*.secrets.*
+
+# === Build artifacts ===
+**/target/
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# === Logs ===
+logs/
+*.log
+*.log.gz
+
+# === Large data / binary ===
+data/raw/
+data/processed/
+image/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

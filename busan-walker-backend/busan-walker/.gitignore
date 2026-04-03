@@ -1,0 +1,59 @@
+HELP.md
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### OS ###
+Thumbs.db
+.DS_Store
+
+### Logs / runtime ###
+*.log
+logs/
+out/
+*.hprof
+.data/
+uploads/
+
+### Eclipse workspace (프로젝트 루트에 섞이는 경우) ###
+.metadata/
+
+### Local secrets / external config ###
+*.local.properties
+busan-walker.local.properties
+config/application-local-secrets.properties
+.env
+.env.*
+*.secrets.*
+*.key
+*.pem
+*.p12
+*.jks
