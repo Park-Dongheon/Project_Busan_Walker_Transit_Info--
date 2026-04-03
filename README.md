@@ -3,7 +3,7 @@
 > 관광지 + 대중교통 접근성 데이터를 결합하여, 사용자에게 최적 이동 옵션을 제공하는 지도 기반 풀스택 웹 서비스
 
 <p align="center">
-  <img src="./docs/gif/Home_Animation.gif" alt="서비스 메인 화면" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Home_Animation.gif" alt="서비스 메인 화면" width="800"/>
 </p>
 
 <p align="center">
@@ -48,7 +48,7 @@
 ### 지도 기반 관광지 탐색
 
 <p align="center">
-  <img src="./docs/gif/Map_Page_Animation.gif" alt="지도 탐색 시연" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Map_Page_Animation.gif" alt="지도 탐색 시연" width="800"/>
 </p>
 
 Naver Maps API를 활용하여 관광지 마커를 지도 위에 표시합니다. 마커 클릭 시 해당 관광지의 교통 접근 정보 패널이 슬라이드로 열리며, 사용자의 현재 위치 기준으로 거리순 정렬이 적용됩니다.
@@ -58,7 +58,7 @@ Naver Maps API를 활용하여 관광지 마커를 지도 위에 표시합니다
 ### 관광지 상세 및 교통 접근 정보
 
 <p align="center">
-  <img src="./docs/gif/Attraction_Detail_Page_Animation.gif" alt="관광지 상세 및 교통 패널 시연" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Attraction_Detail_Page_Animation.gif" alt="관광지 상세 및 교통 패널 시연" width="800"/>
 </p>
 
 버스·지하철·도보 수단별로 필터링하며, 거리 기준으로 정렬된 최대 6개 접근 옵션을 제공합니다. 정보 과부하를 방지하기 위해 표시 개수를 의도적으로 제한했습니다.
@@ -80,7 +80,7 @@ TransitOptionPanelItem    ← UI 렌더링용 모델 (표시 포맷 변환)
 ### 즐겨찾기
 
 <p align="center">
-  <img src="./docs/gif/Favorite_Page_Animation.gif" alt="즐겨찾기 시연" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Favorite_Page_Animation.gif" alt="즐겨찾기 시연" width="800"/>
 </p>
 
 관심 관광지를 즐겨찾기에 추가·제거할 수 있습니다. TanStack Query **Optimistic Update**를 적용하여 서버 응답 전에도 UI가 즉시 반응하며, 실패 시 자동으로 롤백됩니다.
@@ -90,7 +90,7 @@ TransitOptionPanelItem    ← UI 렌더링용 모델 (표시 포맷 변환)
 ### 리뷰
 
 <p align="center">
-  <img src="./docs/gif/Review_Page_Animation.gif" alt="리뷰 시연" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Review_Page_Animation.gif" alt="리뷰 시연" width="800"/>
 </p>
 
 관광지에 리뷰를 작성하고 이미지를 다중 업로드할 수 있습니다. 이미지는 **Presigned URL → S3 직접 업로드 → CloudFront CDN 배포** 흐름으로 처리되어 서버 트래픽 부담을 최소화합니다.
@@ -100,7 +100,7 @@ TransitOptionPanelItem    ← UI 렌더링용 모델 (표시 포맷 변환)
 ### 회원 인증
 
 <p align="center">
-  <img src="./docs/gif/Auth_Animation.gif" alt="회원 인증 시연" width="800"/>
+  <img src="https://github.com/Park-Dongheon/--Project_Busan_Walker_Transit_Info/releases/download/v1.0.0/Auth_Animation.gif" alt="회원 인증 시연" width="800"/>
 </p>
 
 이메일 인증 기반 회원가입, **JWT + HttpOnly 쿠키 + CSRF Double Submit Cookie** 패턴으로 보안을 구성했습니다. Rate Limiting을 통해 로그인·회원가입·이메일 재전송 엔드포인트를 보호합니다.
